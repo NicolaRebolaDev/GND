@@ -15,7 +15,7 @@ function createWindow () {
   })
   win.loadFile('./loading.html')
 }
-/*
+
 const sendStatusToWindow = (text) => {
   dialog.showMessageBox({
     type: "info",
@@ -43,7 +43,7 @@ autoUpdater.on("error", err => {
 autoUpdater.on("update-downloaded", info => {
   sendStatusToWindow("Update downloaded. Will install now")
   autoUpdater.quitAndInstall()
-});*/
+});
 
 app.whenReady().then(createWindow)
 
