@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>G&D Marble and Granite</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
+    <!--Personalization-->
+    <script src="../js/login.js"></script>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--FontsAwesome-->
+    <link rel="stylesheet" href="../../node_modules/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="wrapper" style="padding-top: 10%;">
+        <h1 class="text-center">G&D ADMINISTRATOR</h1>
+        <div class="container mt-5 justify-content-center">
+        <div class="card d-flex w-50 mx-auto">
+            <div class="card-header"><h5 id='title'>Login</h5></div>
+            <div class="card-body">
+                <form>
+                    <div class="input-group">
+                        <div class="input-group-prepend" style="width: 20%;">
+                            <span class="input-group-text" style="width: 100%;">Username:</span>
+                        </div>
+                        <input type="text" class="form-control" id="user" placeholder="Enter your username">
+                    </div>
+                    <div class="input-group mt-3">
+                        <div class="input-group-prepend" style="width: 20%">
+                            <span class="input-group-text" style="width: 100%;">Password:</span>
+                        </div>
+                        <input type="password" class="form-control" id="pass" placeholder="Enter your password">
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="custom-control custom-switch col-6 mt-2">
+                        <input type="checkbox" class="custom-control-input" id="customSwitchUser">
+                        <label class="custom-control-label" for="customSwitchUser">New User</label>
+                    </div>
+                    <div class="justify-content-right col-6">
+                        <button type="button" class="btn btn-primary float-right" id="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

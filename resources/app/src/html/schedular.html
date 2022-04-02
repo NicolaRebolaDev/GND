@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>G&D Marble and Granite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
+    <!--Personalization-->
+    <script src="../js/schedular.js"></script>
+    <link rel="stylesheet" href="../css/numbersSpiners.css">
+    <!--FontsAwesome-->
+    <link rel="stylesheet" href="../../node_modules/font-awesome/css/font-awesome.min.css">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--SideBar-->
+    <link rel="stylesheet" href="../css/simple-sidebar.css">
+    <!--Calendar-->
+    <script src="../../node_modules/fullcalendar/main.min.js"></script>
+    <link rel="stylesheet" href="../../node_modules/fullcalendar/main.min.css">
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper" >
+            <div class="sidebar-heading" style="text-align: center;">G&D <br> Marble and Granite Inc.</div>
+                <div class="list-group list-group-flush" >
+                    <a href="schedular.html" role="button" id="para_hab" class="list-group-item bg-secondary text-white list-group-item-action">Schedule</a>
+                    <a href="suppliers.html" role="button" id="para_perfil" class="list-group-item list-group-item-action bg-light">Suppliers</a>
+                    <a href="clients.html" role="button" class="list-group-item list-group-item-action bg-light">Clients</a>
+                    <a href="jobs.html" role="button" class="list-group-item list-group-item-action bg-light">Jobs</a>
+                    <a href="inventary.html" role="button" class="list-group-item list-group-item-action bg-light">Inventory</a>
+                </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper" style="height: 100vh;">
+            <nav class="navbar navbar-expand-lg border-bottom" style="background-color: rgba(0,124,165, 52);">
+                <button class="btn btn-dark rounded" id="menu-toggle">Menu</button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+            <div class="container-fluid m-3 p-3">
+                <span class="display-4">Schedule</span>
+            </div>
+            <div class="container mt-3" id="general" style="display: none;">
+                <div id="calendar" class="container-fluid" style="height: 80vh;"></div>
+            </div>
+            <!-- /#page-content-wrapper -->
+        </div>
+    <!-- /#wrapper -->
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">There is no client registered with that phone</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" class="close" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

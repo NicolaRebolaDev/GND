@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>G&D Marble and Granite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
+    <!--Personalization-->
+    <script src="../js/suppliers.js"></script>
+    <link rel="stylesheet" href="../css/numbersSpiners.css">
+    <!--FontsAwesome-->
+    <link rel="stylesheet" href="../../node_modules/font-awesome/css/font-awesome.min.css">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--SideBar-->
+    <link rel="stylesheet" href="../css/simple-sidebar.css">
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">G&D Marble and Granite Inc.</div>
+                <div class="list-group list-group-flush" >
+                    <a href="schedular.html" role="button" id="para_hab" class="list-group-item bg-light list-group-item-action">Schedule</a>
+                    <a href="#" role="button" id="para_perfil" class="list-group-item list-group-item-action bg-secondary text-white">Suppliers</a>
+                    <a href="clients.html" role="button" class="list-group-item list-group-item-action bg-light">Clients</a>
+                    <a href="jobs.html" role="button" class="list-group-item list-group-item-action bg-light">Jobs</a>
+                    <a href="inventary.html" role="button" class="list-group-item list-group-item-action bg-light">Inventory</a>
+                </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg border-bottom" style="background-color: rgba(0,124,165, 52);">
+                <button class="btn btn-dark rounded" id="menu-toggle">Menu</button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+            <div class="container-fluid m-3 p-3">
+                <span class="display-3">Suppliers</span>
+                <div class="float-right">
+                    <button id="back_to_table" class="btn-lg mr-5 mt-3 btn-primary" style="display: none;">Back To Table</button>
+                    <button id="new_supplier" class="btn-lg mr-5 mt-3 btn-primary">New Supplier</button>
+                </div>
+                
+            </div>
+            <div class="container mt-3 w-80"  id="general" style="display: none;">
+                <div id="table" class="container-fluid">
+                    <table class="table table-striped table-hover table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-center">ID</th>
+                                <th scope="col" class="text-center">Name</th>
+                                <th scope="col" class="text-center">Representant</th>
+                                <th scope="col" class="text-center">Representant's Phone</th>
+                                <th scope="col" class="text-center">Update</th>
+                                <th scope="col" class="text-center">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="suppliers_list"></tbody>
+                    </table>
+                </div>
+                <div id="form" class="container-fluid">
+                    <form>
+                        <h4>New Supplier</h4>
+                        <input type="text" id="id_supplier" hidden>
+                        <div class="input-group mt-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Company's Name:</span>
+                            </div>
+                            <input type="text" placeholder="G&D Marble and Granite .Inc" id="com_name" class="form-control" required>
+                            <div class="mt-1 col-12">This field is required</div>
+                        </div>
+                        <div class="input-group mt-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Representant fullname:</span>
+                            </div>
+                            <input type="text" placeholder="Ernesto Garcia" id="representant" class="form-control" required>
+                            <div class="mt-1 col-12">This field is required</div>
+                        </div>
+                        <div class="input-group mt-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Representant's Phone:</span>
+                            </div>
+                            <input type="text" placeholder="(786) 486-4655" id="phone" class="form-control">
+                            <div class="mt-1 col-12">This field is required</div>
+                        </div>
+                        <button type="button" class="btn btn-primary mt-3" id="register">Register Supplier</button>
+                        <button type="button" class="btn btn-primary mt-3" id="update_supp" style="display: none;">Update Supplier</button>
+                    </form>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+        </div>
+    <!-- /#wrapper -->
+    </div>
+</body>
+</html>

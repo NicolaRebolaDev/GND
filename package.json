@@ -1,0 +1,68 @@
+{
+  "name": "GND",
+  "version": "0.1.2",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-forge package",
+    "publish": "electron-forge publish",
+    "make": "electron-forge make",
+    "make-mac": "electron-forge make --platform darwin"
+  },
+  "keywords": [],
+  "author": "Nicola Rebola Perricone",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "^11.1.1",
+    "electron-forge-maker-nsis": "^22.10.4"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "electron-squirrel-startup": "^1.0.0",
+    "font-awesome": "^4.7.0",
+    "fs-extra": "^9.0.1",
+    "fullcalendar": "^5.5.0",
+    "jquery": "^3.5.1",
+    "update-electron-app": "^2.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicolaRebolaDev/GND.git"
+  },
+  "bugs": {
+    "url": "+https://github.com/NicolaRebolaDev/issues"
+  },
+  "homepage": "+https://github.com/NicolaRebolaDev/GND#readme",
+  "description": "A simple enterprise manage software for G&D Marble and Granite",
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "iconUrl": "./icon.png"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel"
+        }
+      ],
+      "electronPackagerConfig": {
+        "iconUrl": "./icon.png"
+      },
+      "publish": {
+        "name": "@electron-forge/publisher-github",
+        "config": {
+          "repository": {
+            "owner": "NicolaRebolaDev",
+            "name": "GND"
+          },
+          "prerelease": true
+        }
+      }
+    }
+  }
+}
