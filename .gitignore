@@ -6,4 +6,4 @@ dist/
 observaciones.txt
 **/*.pdf
 docs/
-**/resources/app/docs
+resources/aoo/docs/
