@@ -5,3 +5,4 @@ requirements/
 dist/
 observaciones.txt
 *.pdf
+docs/
