@@ -4,5 +4,6 @@ out/
 requirements/
 dist/
 observaciones.txt
-*.pdf
+**/*.pdf
 docs/
+resources/
